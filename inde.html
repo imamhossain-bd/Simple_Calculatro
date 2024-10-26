@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <div id="container" class="w-[100%] h-[100vh] flex justify-center ">
+            <div id="calculator" class="bg-[#27403c] w-[380px] h-[550px] mt-[5%] p-5">
+                <form action="">
+                    <div class="mt-5 flex justify-end m-[20px, 0] ">
+                        <input class="text-right flex-1 text-3xl px-5 shadow-none" type="text" name="display" id="">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value = '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1)">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                        <input type="button" value="/" onclick="display.value += '/' ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' ">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' ">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += '00' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input class="px-[73px] text-center" type="button" value="=" onclick="display.value = eval(display.value)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="Js/app.js"></script>
+</body>
+</html>
